@@ -1,0 +1,14 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    /*
+      FIX: Add path mapping to align with babel.config.js module-resolver.
+      This allows TypeScript and IDEs like VS Code to understand the '@/' alias,
+      enabling features like auto-import and go-to-definition.
+    */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
